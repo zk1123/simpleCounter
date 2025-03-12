@@ -4,9 +4,12 @@ body {
     align-items: center;
     height: 100vh;
     background: #f0f0f0;
-    background-image: url(Background.jpg);
+    /* background-image: url(Background.jpg); */
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #262096;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .counter-container {
@@ -35,7 +38,7 @@ h1 {
 }
 
 #counter:active{
-    animation: animate 0.5s ease-in-out infinite;
+    animation: animate 0.2s ease-in-out infinite;
     @keyframes animate{
         0%{margin-bottom 0;}
         60%{margin-bottom 40px;}
@@ -50,7 +53,7 @@ h1 {
     cursor: pointer;
     border: none;
     border-radius: 8px;
-    transition: all 1s ease;
+    transition: all 0.2s ease;
     background: #009dff;
     color: white;
     font-family: 'Poppins',sans-serif;
@@ -65,20 +68,21 @@ h1 {
     cursor: pointer;
     border: none;
     border-radius: 8px;
-    transition: all 1s ease;
+    transition: all 0.2s ease;
     background: #009dff;
     color: white;
     font-family: 'Poppins',sans-serif;
 }
 
-button:active{
-    transform: scale(0.50);
+.minus:active,.plus:active,.reset:active{
+    transform: scale(0.9);
 }
 
 .reset {
     background: #e40101;
     color: white;
     border-radius: 50px;
+    border-style: none;
     width:100px;
     height: 100px;
     font-size: 20px;
@@ -87,9 +91,12 @@ button:active{
     cursor: pointer;
     padding-bottom: -25px;
     font-family: 'Poppins',sans-serif;
-    transition: all 1s ease;
+    transition: all 0.2s ease;
 }
 
 .plus:hover,.minus:hover,.reset:hover {
     opacity: 0.8;
+}
+button {
+    transform: translate3d(0, 0, 0);
 }
